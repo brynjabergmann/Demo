@@ -18,7 +18,6 @@ def useVariable(name=None):
 def form():
     if request.method == 'POST':
         name = request.form['name']
-        print(name)
         return redirect('/index/' + name)
     else:
         return render_template('form.html')

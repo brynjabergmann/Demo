@@ -14,6 +14,8 @@ def helloWorld():
 def useVariable(name=None): 
     return render_template('index.html', name=name)
 
+# The form method checks if the request method is POST or not 
+# If POST then it takes the name from the form and redirects it to the index page with the name as an argument
 @app.route('/form', methods=['GET', 'POST'])
 def form():
     if request.method == 'POST':
